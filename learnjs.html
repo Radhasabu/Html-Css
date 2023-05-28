@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict";
+        var a="Hey I am Radhika";
+        console.log(a);
+        let b=45;
+        console.log(b);
+        function hello(){
+            console.log("Hello Friends");
+        }
+        let obj={
+            r : 45,
+            s : 35,
+            a : 25, 
+            func : function sum(a,b)
+            {
+                let c=a+b;
+                console.log("Addition of two numbers ", a+b);
+            }
+        }
+        console.log(obj);
+        document.addEventListener("click",function click(){
+            console.log("clicked");
+            alert("You clicked it");
+            let conf=confirm("Are you sure");
+            console.log(conf);
+        });
+
+        console.log(this);
+        let mobj={
+            a:5,
+            myfunc : function(number)
+            {
+                console.log("this is "+this);
+            },
+            myfunc1 :(number)=>{
+                console.log("func1"+this);
+            }
+        }
+        console.log(mobj.a);
+        setTimeout(()=>{
+            console.log("before 3 sec");
+        },3000);
+        console.log("after 3 sec");
+    </script>
+</head>
+<body>
+    <h1>I am learning JS</h1>
+</body>
+</html>

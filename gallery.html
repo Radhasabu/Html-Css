@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travlers</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <div class="logo"><h1 class="animated infinite heartBeat">INDIA </h1></div>
+            <ul>
+                <li><a href="/travelling.html">Home</a></li>
+                <li><a href="/discover.html">Discover</a></li>
+                <li><a href="/gallery.html">Gallery</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="slider1">
+                <img src="/ranimahal.png" alt="">
+                <div class="btn">
+                    <button onclick="back(0)"><i class='bx bx-chevron-left'></i></button>
+                    <button onclick="next(0)"><i class='bx bx-chevron-right'></i></button>
+                </div>
+                <h1 id="h1">Rajasthan</h1>
+            </div>
+            <div class="slider2">
+                <img src="/mumbai.png" alt="">
+                <div class="btn">
+                    <button onclick="back(1)"><i class='bx bx-chevron-left'></i></button>
+                    <button onclick="next(1)"><i class='bx bx-chevron-right'></i></button>
+                </div>
+                <h1 id="h1">Mumbai</h1>
+            </div>
+            <div class="slider3">
+                <img src="/image2.png" alt="">
+                <div class="btn">
+                    <button onclick="back(2)"><i class='bx bx-chevron-left'></i></button>
+                    <button onclick="next(2)"><i class='bx bx-chevron-right'></i></button>
+                </div>
+                <h1 id="h1">Pune</h1>
+            </div>
+        </div>
+     </div>
+     <script>
+        var slide=[".slider1 h2",".slider2 h2",".slider3 h2"];
+        var sliders=[".slider1 img",".slider2 img",".slider3 img"];
+        var images=[["/kashmir.png","/ranimahal.png","/tag-mahal.jpg"],["/jaipur.jpg","/mumbai.png","/tawang.jpeg"],["/image1.webp","/image2.png","image3.jpg"]];
+        var text=[["kashmir","ranimahal","tag-mahal"],["jaipur","mumbai","tawang"],["image1","image2","image3"]];
+        var num=0;
+        function next(i){
+            var maining=document.querySelector(sliders[i]);
+            var word=document.querySelector(slide[i]);
+            num++;
+            if(num>=images[i].length){
+                num=0;
+                word=text[i][num];
+                maining.src=images[i][num];
+            }
+            else{
+                word=text[i][num];
+                maining.src=images[i][num];
+            }
+        }
+        function back(i){
+            var maining=document.querySelector(sliders[i]);
+            num--;
+            if(num<0){
+                num=images[i].length-1;
+                maining.src=images[i][num];
+            }
+            else{
+                maining.src=images[i][num];
+            }
+        }
+     </script>
+</body>
+</html>

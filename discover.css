@@ -1,0 +1,200 @@
+body{
+    padding:0 ;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(24, 60, 239, 0.3),rgba(0,0,0,0.1));
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+.container h1{
+    margin-top: 50px;
+    margin-left: 510px;
+    font-size: 60px;
+    font-family: 'karla',sans-serif;
+    font-weight: lighter;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav{
+    width:100%;
+    height: 85px;
+    /* position: absolute; */
+    top:0;
+    left:0;
+    background:black;
+    color: rgb(240, 237, 237);
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.2);
+    align-items: center;
+    margin: auto;
+}
+nav .logo{
+    /* width: 25%; */
+    align-items: center;
+}
+nav ul li{
+    height: 5vh;
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2vh;
+}
+nav ul li a:hover{
+    color: black;
+    font-weight: bolder;
+}
+.main h3{
+    margin: 30px 0 20px 0;
+    font-size: 50px;
+    font-weight: 500;
+    text-shadow: 2px 1px 5px rgb(16, 15, 15);
+    text-transform: uppercase;
+    color: white;
+}
+.main{
+    text-align:center;
+    position: relative;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: center;
+}
+.info button{
+    border-radius: 20px;
+}
+.main h4{
+    font-size: 2.5vh;
+    font-weight: 300;
+    padding-left: 35px;
+}
+.info a{
+    padding: 12px 30px;
+    outline:none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transform: all .5s ease;
+    display: inline-block;
+}
+.span{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(248, 243, 243) ;
+    background: url(./images9.jfif);
+    -webkit-background-clip: text ;
+    background-position: 0 0;
+    animation: back 30s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.slider-frame{
+    overflow: hidden;
+    height: 800px;
+    width: 1200px;
+    /* margin-left: 360px; */
+    margin-top: 20px;
+    text-align:center;
+    position: relative;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: center;
+}
+@-webkit-keyframes slide_animation{
+   0%{left: 0px;}
+   10%{left: 0px;}
+   20%{left: 1200px;}
+   30%{left: 1200px;}
+   40%{left: 2400px;}
+   50%{left: 2400px;}
+   60%{left: 1200px;}
+   70%{left: 1200px;}
+   80%{left: 0px;}
+   90%{left: 0px;}
+   100%{left:0px;}
+}
+
+.slide-images{
+    width: 3600px;
+    height:800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+ .img-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+
+ }
+ .back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio:16/9) {
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+    
+}
+@media (max-aspect-ratio:16/9) {
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+    
+}
+.selection{
+    text-align: center;
+    margin:33vh;
+}
+.selection h2{
+    margin-top:55px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 40px;
+    letter-spacing: 1.2px;
+    font:bold;
+}
+
+form{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding-bottom: 45px;
+}
+form select{
+    width:700px;
+    padding: 15px;
+    padding-left: 10px;
+    background-color: rgb(79, 29, 29);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 10px rgb(41, 40, 40);
+    cursor: pointer;
+    color: aliceblue;
+
+}
